@@ -137,11 +137,15 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 56px 0 40px; }
   }
   // Notes are Markdown files in notes/, listed in content.json.
   // Markdown subset: paragraphs, ## headings, > quotes, - lists, ![caption](image), ---, **bold**, *italic*, [links](url)
-  function md(text) {
+  // Image paths are relative to the file the text came from (a note in notes/ uses ../images/...),
+  // the same way GitHub and other Markdown viewers read them.
+  function md(text, baseFile) {
+    var base = new URL(baseFile || "content.json", location.href);
     return String(text || "").trim().split(/\n{2,}/).map(function (block) {
       var img = block.match(/^!\[([^\]]*)\]\(([^\s)]+)\)$/);
       if (img) {
-        return '<figure><img src="' + esc(img[2]) + '" alt="' + esc(img[1]) + '" loading="lazy">' +
+        var src = new URL(img[2], base).href;
+        return '<figure><img src="' + esc(src) + '" alt="' + esc(img[1]) + '" loading="lazy">' +
           (img[1] ? "<figcaption>" + inline(img[1]) + "</figcaption>" : "") + "</figure>";
       }
       if (/^---+$/.test(block.trim())) return '<hr class="rule">';
@@ -200,7 +204,7 @@ hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 56px 0 40px; }
     var back = '<a class="back" href="#notes">← notes</a>';
     document.title = n.title + " · Tanzim Redwan";
     return loadNote(n).then(function (text) {
-      view.innerHTML = head + '<div class="prose">' + md(text) + "</div></article>" + back;
+      view.innerHTML = head + '<div class="prose">' + md(text, n.file) + "</div></article>" + back;
     }).catch(function () {
       view.innerHTML = head + '<p class="empty">This note could not load. Please refresh.</p></article>' + back;
     });

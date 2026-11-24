@@ -34,7 +34,8 @@ its link).
 - `[link text](https://...)`
 - `> quote`
 - `- list item`
-- `![caption](images/picture.png)` on its own line: shows a picture with a caption.
+- `![caption](../images/picture.png)` on its own line: shows a picture with a caption. The path is relative to
+  the note file, so it also displays when you open the note on GitHub.
 
 **Quotes:** edit `"quotes"` in `content.json`. They show in the order listed.
 

@@ -28,7 +28,7 @@ Here's what came out.
 
 **1. The stopwatch matters, but on its own it proves nothing.**
 
-![Each dot is one simulated person. More hours with the switch on, more lifetime output.](images/stopwatch.png)
+![Each dot is one simulated person. More hours with the switch on, more lifetime output.](../images/stopwatch.png)
 
 More time switched on means more output, exactly like I predicted. The uncomfortable part: this happens no matter which side of the debate is right. Even if talent decided everything, talented people would still practise more. So "people who practise more achieve more" can't settle anything by itself, and I had to drop it as my main evidence.
 
@@ -36,7 +36,7 @@ More time switched on means more output, exactly like I predicted. The uncomfort
 
 A world where ability doesn't matter at all can't explain why IQ and chess skill are linked (in real studies they are, modestly). A world where talent decides everything makes that link far too strong. What fits is somewhere in between: ability matters, but moderately. Which is pretty close to where I started.
 
-![Grey: everyone. Colour: the top 1% by lifetime output. Left: if talent decided everything. Right: the version that fits the evidence.](images/top1-iq.png)
+![Grey: everyone. Colour: the top 1% by lifetime output. Left: if talent decided everything. Right: the version that fits the evidence.](../images/top1-iq.png)
 
 In the version that fits, most of the top 1% have completely ordinary IQs. Low ability can be a barrier, but high ability gives surprisingly little extra edge.
 
@@ -44,7 +44,7 @@ In the version that fits, most of the top 1% have completely ordinary IQs. Low a
 
 This one surprised me. In most fields, the top 1% of people produce around 10% of all the output. To match how lopsided that is, the model needed luck. So I re-ran the exact same lives 200 times, changing nothing but the luck.
 
-![Each bar is one person's chance of landing in the top 1% across 200 re-runs of the same life.](images/luck.png)
+![Each bar is one person's chance of landing in the top 1% across 200 re-runs of the same life.](../images/luck.png)
 
 Not a single person made the top 1% in most of the re-runs. For every place at the top, there were about 40 realistic candidates. So the stopwatch gets you into the pool, and luck picks who ends up on top. Which, honestly, makes the word "genius" a bit humbler.
 
@@ -58,7 +58,7 @@ I tested this as well, and I'll be honest: the strongest version of my idea didn
 
 What does fit is a softer version: part of the school gap is friction sitting in a different spot, rather than friction everywhere.
 
-![The gap between the richest and poorest quarter of kids, in percentile points. Lower means more equal.](images/best-area.png)
+![The gap between the richest and poorest quarter of kids, in percentile points. Lower means more equal.](../images/best-area.png)
 
 In that version, the rich–poor gap in school is about 24 percentile points, but in each person's *best* area it shrinks to roughly 5 to 10. So environments don't make us equal. But they decide a lot more of *where* we can be great than we usually admit, especially in things that are free to get into.
 
