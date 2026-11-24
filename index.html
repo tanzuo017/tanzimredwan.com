@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tanzim Redwan</title>
+<meta name="description" content="Tanzim Redwan: research, Project Q2, and notes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d1c1a'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-size='16' font-weight='600' fill='%23f9f7f3' text-anchor='middle'%3ETR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+<style>
+/* One narrow reading column: name left, two-word nav right, nothing else competing. */
+:root {
+  --bg: #f9f7f3;
+  --fg: #1d1c1a;
+  --muted: #8b8780;
+  --faint: #b3afa7;
+  --rule: #e6e2da;
+  --accent: #2b4bd6;
+  --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #161614; --fg: #ebe8e2; --muted: #8f8b84; --faint: #66635e; --rule: #2a2926; --accent: #8ea2ff; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--sans); font-size: 17px; line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 660px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 64px 96px;
+}
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 56px; }
+.name { font-size: 21px; font-weight: 500; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; }
+nav { display: flex; gap: 28px; font-size: 18px; }
+nav a { position: relative; color: var(--muted); text-decoration: none; padding-bottom: 2px; transition: color 0.25s ease; }
+nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.5px; background: var(--fg); transform: scaleX(0); transform-origin: left; transition: transform 0.35s cubic-bezier(.2,.7,.2,1); }
+nav a:hover { color: var(--fg); }
+nav a[aria-current="page"] { color: var(--fg); }
+nav a[aria-current="page"]::after { transform: scaleX(1); }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+.prose p { margin: 0 0 1.4em; }
+.prose a { text-decoration: none; border-bottom: 1px solid var(--faint); transition: border-color 0.2s ease; }
+.prose a:hover { border-bottom-color: var(--fg); }
+.prose h2 { font-size: 17px; font-weight: 500; margin: 2.2em 0 0.6em; }
+.prose blockquote { margin: 0 0 1.4em; padding-left: 18px; border-left: 2px solid var(--rule); color: var(--muted); }
+.prose ul { margin: 0 0 1.4em; padding-left: 1.1em; }
+.prose li { margin-bottom: 0.3em; }
+.prose figure { margin: 2em 0 2.2em; }
+.prose figure img { display: block; width: 100%; max-width: 100%; height: auto; }
+.prose figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.6; }
+
+hr.rule { border: 0; border-top: 1px solid var(--rule); margin: 56px 0 40px; }
+.label { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); margin: 0 0 24px; font-weight: 400; }
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.list a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; text-decoration: none; }
+.list .t { border-bottom: 1px solid transparent; min-width: 0; transition: border-color 0.2s ease; }
+.list a:hover .t { border-bottom-color: var(--fg); }
+.list .y { font-size: 14px; color: var(--faint); font-variant-numeric: tabular-nums; flex: none; }
+
+.quotes { display: grid; gap: 36px; }
+.quote p { margin: 0; }
+.quote .src { font-size: 15px; color: var(--faint); margin-top: 8px; }
+
+.empty { color: var(--muted); margin: 0; }
+
+.note-head h1 { font-size: 26px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.3; margin: 0 0 8px; text-wrap: balance; }
+.note-head .date { color: var(--faint); font-size: 14px; margin-bottom: 40px; font-variant-numeric: tabular-nums; }
+.back { display: inline-block; margin-top: 40px; color: var(--muted); text-decoration: none; font-size: 15px; transition: color 0.2s ease, transform 0.25s ease; }
+.back:hover { color: var(--fg); transform: translateX(-3px); }
+
+.links { display: flex; gap: 28px; flex-wrap: wrap; font-size: 16px; }
+.links a { color: var(--muted); text-decoration: none; transition: color 0.2s ease; }
+.links a:hover { color: var(--fg); }
+
+@media (max-width: 480px) {
+  .wrap { padding-block: 40px 96px; }
+  header { margin-bottom: 40px; }
+  body { font-size: 16px; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  #view.enter > *, #view.enter .list > li, #view.enter .quotes > .quote { animation: rise 0.5s cubic-bezier(.2,.7,.2,1) both; }
+  #view.enter > *:nth-child(2) { animation-delay: 50ms; }
+  #view.enter > *:nth-child(3) { animation-delay: 90ms; }
+  #view.enter > *:nth-child(n+4) { animation-delay: 120ms; }
+  #view.enter .list > li:nth-child(2), #view.enter .quotes > .quote:nth-child(2) { animation-delay: 70ms; }
+  #view.enter .list > li:nth-child(3), #view.enter .quotes > .quote:nth-child(3) { animation-delay: 110ms; }
+  #view.enter .list > li:nth-child(n+4), #view.enter .quotes > .quote:nth-child(n+4) { animation-delay: 150ms; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="name" href="#about">Tanzim Redwan</a>
+    <nav aria-label="Main">
+      <a href="#about" id="nav-about">about</a>
+      <a href="#notes" id="nav-notes">notes</a>
+    </nav>
+  </header>
+  <main id="view"><noscript><p>This site needs JavaScript to show its content.</p></noscript></main>
+</div>
+<script>
+(function () {
+  "use strict";
+  var DATA = { about: "", notes: [], quotes: [], links: [] };
+  var view = document.getElementById("view");
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function inline(s) {
+    s = esc(s);
+    s = s.replace(/\[([^\]]+)\]\(((?:https?:\/\/|mailto:|#)[^\s)]+)\)/g, function (m, text, url) {
+      var ext = /^https?:/.test(url) ? ' target="_blank" rel="noopener"' : "";
+      return '<a href="' + url + '"' + ext + ">" + text + "</a>";
+    });
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+    return s.replace(/\n/g, "<br>");
+  }
+  // Notes are Markdown files in notes/, listed in content.json.
+  // Markdown subset: paragraphs, ## headings, > quotes, - lists, ![caption](image), ---, **bold**, *italic*, [links](url)
+  function md(text) {
+    return String(text || "").trim().split(/\n{2,}/).map(function (block) {
+      var img = block.match(/^!\[([^\]]*)\]\(([^\s)]+)\)$/);
+      if (img) {
+        return '<figure><img src="' + esc(img[2]) + '" alt="' + esc(img[1]) + '" loading="lazy">' +
+          (img[1] ? "<figcaption>" + inline(img[1]) + "</figcaption>" : "") + "</figure>";
+      }
+      if (/^---+$/.test(block.trim())) return '<hr class="rule">';
+      if (/^## /.test(block)) return "<h2>" + inline(block.slice(3)) + "</h2>";
+      if (/^> /.test(block)) return "<blockquote>" + inline(block.replace(/^> ?/gm, "")) + "</blockquote>";
+      if (/^- /.test(block)) {
+        return "<ul>" + block.split(/\n(?=- )/).map(function (l) { return "<li>" + inline(l.replace(/^- /, "")) + "</li>"; }).join("") + "</ul>";
+      }
+      return "<p>" + inline(block) + "</p>";
+    }).join("");
+  }
+  function fmtDate(d) {
+    var dt = new Date(d + "T12:00:00");
+    return isNaN(dt) ? d : dt.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  }
+  function sortedNotes() {
+    return DATA.notes.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+  }
+
+  function renderAbout() {
+    var h = '<section class="prose">' + md(DATA.about) + "</section>";
+    var links = (DATA.links || []).filter(function (l) { return l && l.url; });
+    if (links.length) {
+      h += '<hr class="rule"><div class="links">' + links.map(function (l) {
+        return '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + "</a>";
+      }).join("") + "</div>";
+    }
+    view.innerHTML = h;
+  }
+  function renderNotes() {
+    var notes = sortedNotes();
+    var h = '<h2 class="label">Writings</h2>';
+    h += notes.length
+      ? '<ul class="list">' + notes.map(function (n) {
+          return '<li><a href="#' + esc(n.id) + '"><span class="t">' + esc(n.title) + '</span><span class="y">' + esc((n.date || "").slice(0, 4)) + "</span></a></li>";
+        }).join("") + "</ul>"
+      : '<p class="empty">The first notes are on their way.</p>';
+    if (DATA.quotes && DATA.quotes.length) {
+      h += '<hr class="rule"><h2 class="label">Quotes</h2><div class="quotes">' + DATA.quotes.map(function (q) {
+        return '<div class="quote"><p>"' + inline(q.text) + '"</p><div class="src">' + esc(q.source) + "</div></div>";
+      }).join("") + "</div>";
+    }
+    view.innerHTML = h;
+  }
+  var noteCache = {};
+  function loadNote(n) {
+    if (n.body) return Promise.resolve(n.body);
+    if (noteCache[n.file]) return Promise.resolve(noteCache[n.file]);
+    return fetch(n.file, { cache: "no-cache" }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.text();
+    }).then(function (t) { noteCache[n.file] = t; return t; });
+  }
+  function renderNote(n) {
+    var head = '<article><div class="note-head"><h1>' + esc(n.title) + '</h1><div class="date">' + esc(fmtDate(n.date)) + "</div></div>";
+    var back = '<a class="back" href="#notes">← notes</a>';
+    document.title = n.title + " · Tanzim Redwan";
+    return loadNote(n).then(function (text) {
+      view.innerHTML = head + '<div class="prose">' + md(text) + "</div></article>" + back;
+    }).catch(function () {
+      view.innerHTML = head + '<p class="empty">This note could not load. Please refresh.</p></article>' + back;
+    });
+  }
+
+  function route() {
+    var hash = decodeURIComponent((location.hash || "#about").slice(1));
+    var note = DATA.notes.filter(function (n) { return n.id === hash; })[0];
+    var isNotes = hash === "notes" || !!note;
+    document.getElementById("nav-about").setAttribute("aria-current", isNotes ? "false" : "page");
+    document.getElementById("nav-notes").setAttribute("aria-current", isNotes ? "page" : "false");
+    document.title = "Tanzim Redwan";
+    var done = note ? renderNote(note) : (hash === "notes" ? renderNotes() : renderAbout());
+    Promise.resolve(done).then(function () {
+      view.classList.remove("enter");
+      void view.offsetWidth;
+      view.classList.add("enter");
+    });
+  }
+
+  window.addEventListener("hashchange", function () { route(); window.scrollTo(0, 0); });
+  fetch("content.json", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) { DATA = d; route(); })
+    .catch(function () { view.innerHTML = '<p class="empty">The page could not load its content. Please refresh.</p>'; });
+})();
+</script>
+</body>
+</html>
