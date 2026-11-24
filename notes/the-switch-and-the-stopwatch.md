@@ -2,7 +2,12 @@ I stand by this rather firmly, but first, hear me out before you judge me.
 
 For decades, academics have argued about what is it exactly that makes someone a genius. It's usually called the talent vs. practice debate, and it goes something like this. One side says genius is innate: you're either born with it or you're not. The other side says people can be trained, step by step, until they reach the point we call "genius".
 
-The practice side has some famous stories. Almost a hundred years ago, the psychologist John B. Watson claimed that if you gave him a dozen healthy babies, he could train any one of them to become a doctor, a lawyer, an artist, a thief or whatever he picked. Then there's László Polgár, who, being a firm believer in the practice side of the genius debate decided to raise his three daughters as chess players. His eldest and youngest daughters, Susan and Judit, became grandmasters. Judit became the strongest female player in history. Interestingly, the middle daughter, Sofia, became an International Master.
+The practice side has some famous stories. Almost a hundred years ago, the psychologist John B. Watson wrote:
+
+> "Give me a dozen healthy infants, well-formed, and my own specified world to bring them up in and I'll guarantee to take any one at random and train him to become any type of specialist I might select—doctor, lawyer, artist, merchant-chief, and, yes, even beggarman and thief, regardless of his talents, penchants, tendencies, abilities, vocations, and race of his ancestors. I am going beyond my facts and I admit it, but so have the advocates of the contrary and they have been doing it for many thousands of years."
+> — John B. Watson, *Behaviorism* (1930)
+
+Then there's László Polgár, who, being a firm believer in the practice side of the genius debate decided to raise his three daughters as chess players. His eldest and youngest daughters, Susan and Judit, became grandmasters. Judit became the strongest female player in history. Interestingly, the middle daughter, Sofia, became an International Master.
 
 Which is counterintuitive because it was the same father with the same house and environment, and each of them receiving the same training, and Judit still went much further than her sisters.
 
