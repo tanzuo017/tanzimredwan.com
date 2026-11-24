@@ -2,7 +2,7 @@ I stand by this rather firmly, but first, hear me out before you judge me.
 
 For decades, academics have argued about what is it exactly that makes someone a genius. It's usually called the talent vs. practice debate, and it goes something like this. One side says genius is innate: you're either born with it or you're not. The other side says people can be trained, step by step, until they reach the point we call "genius".
 
-The practice side has some famous stories. Almost a hundred years ago, the psychologist John B. Watson claimed that if you gave him a dozen healthy babies, he could train any one of them to become a doctor, a lawyer, an artist, a thief or whatever he picked. Then there's László Polgár, who — also being a firm believer in the practice side of the genius debate — decided to raise his three daughters as chess players. His eldest and youngest daughters, Susan and Judit, became grandmasters. Judit became the strongest female player in history. Interestingly, the middle daughter, Sofia, became an International Master.
+The practice side has some famous stories. Almost a hundred years ago, the psychologist John B. Watson claimed that if you gave him a dozen healthy babies, he could train any one of them to become a doctor, a lawyer, an artist, a thief or whatever he picked. Then there's László Polgár, who, being a firm believer in the practice side of the genius debate decided to raise his three daughters as chess players. His eldest and youngest daughters, Susan and Judit, became grandmasters. Judit became the strongest female player in history. Interestingly, the middle daughter, Sofia, became an International Master.
 
 Which is counterintuitive because it was the same father with the same house and environment, and each of them receiving the same training, and Judit still went much further than her sisters.
 
@@ -28,7 +28,7 @@ I didn't want this to stay a nice-sounding idea, so I built a model of it and ra
 
 Here's what came out.
 
-**1. The stopwatch matters, but on its own it proves nothing.**
+**1. The time you live matters, but it proves nothing.**
 
 ![Each dot is one simulated person. More hours with the switch on, more lifetime output.](../images/stopwatch.png)
 
@@ -44,7 +44,7 @@ In the version that fits, most of the top 1% have completely ordinary IQs. Low a
 
 **3. Luck decides the very top.**
 
-This one surprised me. In most fields, the top 1% of people produce around 10% of all the output. To match how lopsided that is, the model needed luck. So I re-ran the exact same lives 200 times, changing nothing but the luck.
+This one surprised me. It reminds me of the [Veritasium video](https://youtu.be/3LopI4YeC4I) where Derek talked about being delusional and in YC language how that allows us to increase our surface area for luck. In most fields, the top 1% of people produce around 10% of all the output. To match how lopsided that is, the model needed luck. So I re-ran the exact same lives 200 times, changing nothing but the luck.
 
 ![Each bar is one person's chance of landing in the top 1% across 200 re-runs of the same life.](../images/luck.png)
 
