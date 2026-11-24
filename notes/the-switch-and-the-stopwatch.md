@@ -72,6 +72,14 @@ But not every pair of fields is unrelated. If two fields are close, what you bui
 
 And even related fields are hard to master. To be truly great at more than one, you'd need *very* low friction from your environment: the time, the money, the quiet, the people around you, all of it. That's what a polymath is to me. Not someone who dabbles in everything, but someone whose environment lets their switch stay on across fields. True polymathy is achieved when someone is fluid at transferring what they've built in one field to another.
 
+I've since added this to my model too. I gave it four fields (Maths, Physics, Music and Sport), with Maths and Physics close enough that practice in one partly counts for the other, and no carry-over at all between unrelated fields, since that's what the research on transfer finds. Everyone gets one daily budget of focus to split between them.
+
+![Left: people grouped from most focused to most spread out, and how high they stand in their best field. Right: how likely someone is to end up in the top 5% of at least two fields.](../images/polymaths.png)
+
+Three things came out. Spreading your time across more fields does lower your standing in your best one, which is the jack of all trades part. Polymaths mostly come from close fields: about 6 in 10 of them combine Maths and Physics, when random chance would give about 2 in 10. And friction matters a lot. People with the lowest friction were more than four times as likely to become polymaths as people with above-average friction.
+
+One thing doesn't fit neatly, though. Nobel laureates are about three times as likely as the general public to have artistic hobbies. With low friction alone, my model only gets to about 1.3 times. So either something does carry over between distant fields after all, or there's another reason top people pick up hobbies, and I haven't figured out which.
+
 ## What I haven't figured out
 
 Before I go any further, I want to admit what this doesn't prove.
@@ -79,7 +87,7 @@ Before I go any further, I want to admit what this doesn't prove.
 - It's a simulation. Every number came from someone else's study. None of it is new data yet.
 - I can't tell whether talent makes it easier to *switch on* in the first place. The existing evidence fits both answers. Settling it would take a real study with around a thousand people.
 - The luck result rests on an assumption: that luck is fresh every year. If the same people turn out to stay on top across their whole careers, I've overstated luck.
-- I haven't tested the polymath idea yet. My model treats fields as completely separate, so it can't show transfer between related fields. That's the next thing I want to add.
+- The polymath part is still rough. Some of it follows straight from how I set the model up (carry-over only between close fields), and it can't explain why top scientists have so many unrelated hobbies.
 - And yes, I'm biased. I want this to be true. I've tried my best to keep that out of my inferences, which is partly why I let the model tell me where I was wrong.
 
 I'm going to keep working on this. If you think I'm wrong, I'd genuinely like to hear why.
